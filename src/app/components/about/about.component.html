@@ -1,0 +1,64 @@
+<section id="about" class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <!-- Title Section -->
+    <div class="text-center mb-12" [@fadeIn]="{ value: '', params: { delay: '0s', duration: '0.5s' } }">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">About Me</h2>
+      <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Get to know more about my background, education, and professional journey.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+      <!-- Image Column -->
+      <div class="md:col-span-2 flex justify-center"
+        [@slideInLeft]="{ value: '', params: { delay: '0s', duration: '0.5s' } }">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500">
+          <img src="/assets/placeholder.svg" alt="Abhishek Kumar Singh" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="md:col-span-3 space-y-6" [@slideInRight]="{ value: '', params: { delay: '0s', duration: '0.5s' } }">
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I am a dedicated software developer with a passion for creating efficient, scalable, and user-friendly
+          applications. With experience in both front-end and back-end development, I enjoy working across the full
+          stack to deliver comprehensive solutions.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          I graduated from GLA University, Mathura with a degree in Computer Science & Engineering. Since then, I've
+          worked with various technologies with a focus on Java, Spring Boot, React.js, Redux, TypeScript and
+          JavaScript, building enterprise applications and consumer-facing products.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          My approach to development combines technical expertise with a strong commitment to best practices, clean
+          code, and continuous learning. I'm always excited to take on new challenges and collaborate with teams that
+          share my enthusiasm for innovation and excellence.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <!-- Education -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Education</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-700 dark:text-gray-300">
+                <span class="font-medium">B.Tech in Computer Science</span>
+                <p class="text-gray-600 dark:text-gray-400">GLA University, Mathura</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interests -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Interests</h3>
+            <ul class="space-y-2">
+              <li class="text-gray-700 dark:text-gray-300">Open Source Contribution</li>
+              <li class="text-gray-700 dark:text-gray-300">Building Side Projects</li>
+              <li class="text-gray-700 dark:text-gray-300">Learning New Technologies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

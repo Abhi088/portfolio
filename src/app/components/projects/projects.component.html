@@ -1,0 +1,50 @@
+<section id="projects" class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Projects</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        A selection of projects I've worked on, showcasing my skills and experience.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div
+        class="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 transition-all duration-500"
+        *ngFor="let project of projects">
+        <div class="relative h-64 w-full">
+          <img [src]="project.image" [alt]="project.title" class="object-cover w-full h-full" />
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            {{ project.title }}
+          </h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            {{ project.description }}
+          </p>
+
+          <div class="mb-6 flex flex-wrap gap-2">
+            <span *ngFor="let tech of project.technologies"
+              class="px-3 py-1 border border-gray-300 dark:border-gray-600 text-sm rounded-md text-gray-800 dark:text-gray-200">
+              {{ tech }}
+            </span>
+          </div>
+
+          <div class="flex space-x-4">
+            <a [href]="project.githubLink" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+              <i class="fab fa-github mr-2"></i>
+              Code
+            </a>
+            <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 text-sm bg-primary text-white rounded-md hover:bg-primary/90 transition">
+              <i class="fas fa-external-link-alt mr-2"></i>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

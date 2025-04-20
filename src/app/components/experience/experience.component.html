@@ -1,0 +1,43 @@
+<section id="experience" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12" [@fadeIn]>
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Professional Experience</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        A timeline of my professional journey and the companies I&apos;ve worked with.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <ng-container *ngFor="let experience of experiences; let i = index">
+        <div
+          class="mb-12 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-primary"
+          [@slideIn] [@fadeIn]="i">
+          <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-primary transform -translate-x-1/2"></div>
+          <div
+            class="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{ experience.title }}</h3>
+                <div class="flex items-center mt-1 text-gray-700 dark:text-gray-300">
+                  <i class="mr-2 h-4 w-4 text-gray-500 fas fa-briefcase"></i>
+                  {{ experience.company }}
+                </div>
+              </div>
+              <div class="flex items-center mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
+                <i class="mr-2 h-4 w-4 fas fa-calendar"></i>
+                {{ experience.period }}
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">{{ experience.description }}</p>
+            <div class="flex flex-wrap gap-2">
+              <ng-container *ngFor="let tech of experience.technologies">
+                <span class="bg-secondary text-white px-3 py-1 rounded-md text-xs">{{ tech }}</span>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
